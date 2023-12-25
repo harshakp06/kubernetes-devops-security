@@ -18,7 +18,8 @@ pipeline {
         stage('Unit test - Junit and Jacoco') {
             steps {
               // sh "mvn test"
-
+              sh 'echo "without mvn test"'
+ 
             }
            post {
               always {
