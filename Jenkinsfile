@@ -15,7 +15,7 @@ pipeline {
             }
         }  
 
-        /* stage('Unit test - Junit and Jacoco') {
+         stage('Unit test - Junit and Jacoco') {
             steps {
               // sh "mvn test"
               sh 'echo "without mvn test"'
@@ -26,7 +26,9 @@ pipeline {
                 junit 'target/surefire-reports/*.xml'
                 jacoco (execPattern : 'target/jacoco.exec' )
               }
-            } */
+            } 
+            
+            }
           
           stage('Docker build and push') {
             steps {
@@ -36,7 +38,7 @@ pipeline {
                sh 'docker build -t harshakp06/numeric-app:""$GIT_COMMIT"" .'
                sh 'docker push harshakp06/numeric-app:""$GIT_COMMIT""'
             }
-        }
+        
          
         }   
     }
