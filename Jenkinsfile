@@ -11,7 +11,7 @@ pipeline {
               //sh "echo passed" 
                sh "mvn clean package -DskipTests=true"
                archiveArtifacts artifacts: 'target/*.jar' //so that they can be downloaded later
-               sh "echo $GIT_COMMIT"
+               sh "echo $GIT_COMMIT --short HEAD"
             }
         }  
 
