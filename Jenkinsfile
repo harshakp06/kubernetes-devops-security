@@ -9,7 +9,7 @@ pipeline {
       stage('Build Artifact') {
             steps {
               //sh "echo passed" 
-               sh "mvn clean package -DskipTests=true"
+               sh "mvn clean install -DskipTests=true"
                archiveArtifacts artifacts: 'target/*.jar' //so that they can be downloaded later
                sh "echo $GIT_COMMIT --short HEAD"
             }
