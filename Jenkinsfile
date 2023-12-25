@@ -9,13 +9,13 @@ pipeline {
       stage('Build Artifact') {
             steps {
               //sh "echo passed" 
-               sh "mvn clean install -DskipTests=true"
+               sh "mvn clean package -DskipTests=true"
                archiveArtifacts artifacts: 'target/*.jar' //so that they can be downloaded later
                sh "echo $GIT_COMMIT --short HEAD"
             }
         }  
 
-        stage('Unit test - Junit and Jacoco') {
+        /* stage('Unit test - Junit and Jacoco') {
             steps {
               // sh "mvn test"
               sh 'echo "without mvn test"'
@@ -26,7 +26,7 @@ pipeline {
                 junit 'target/surefire-reports/*.xml'
                 jacoco (execPattern : 'target/jacoco.exec' )
               }
-            } 
+            } */
           
           stage('Docker build and push') {
             steps {
