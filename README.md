@@ -15,3 +15,17 @@
 `kubectl expose deploy node-app --name node-service --port 5000 --type ClusterIP`
 
 `curl node-service-ip:5000/plusone/99`
+
+## Plugins 
+
+Blueocean 
+
+Maven - Maven can be enabled from the tools
+
+Jacoco - for unit testing 
+
+Docker pipeline and Docker - for Docker push and for using Docker image in the pipeline
+
+dependency-check-jenkins-plugin - 
+
+Sonar - Sonarcloud and Sonarcloud ToDo for the sonar code analysis  
