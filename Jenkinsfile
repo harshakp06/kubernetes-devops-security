@@ -39,8 +39,8 @@ pipeline {
                // pitmutation mutationStatsFile: '**/target/pit-reports/**/mutations.xml'
 
              // pitmutation killRatioMustImprove: false, minimumKillRatio: 50.0, mutationStatsFile: '**/target/pit-reports/**/mutations.xml
-              }
-           /* } 
+           /*   }
+            } 
             
             } */
 
