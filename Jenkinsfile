@@ -5,6 +5,7 @@ pipeline {
         maven 'maven'
     }
   
+  // below code removing old builds
   options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '1', artifactNumToKeepStr: '1', daysToKeepStr: '1', numToKeepStr: '1')
 }
@@ -49,7 +50,7 @@ pipeline {
             
             } */
 
-         /*  stage('SonarQube Analysis') {
+          stage('SonarQube Analysis') {
                steps { 
                // def mvn = tool 'Default Maven';
               withSonarQubeEnv('sonarqube') {
@@ -67,7 +68,7 @@ pipeline {
                 }
                }
               }
-             } */
+             } 
 
           stage('Docker build and push') {
             steps {
