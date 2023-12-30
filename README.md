@@ -28,4 +28,4 @@ Docker pipeline and Docker - for Docker push and for using Docker image in the p
 
 dependency-check-jenkins-plugin - 
 
-Sonar - Sonarcloud and Sonarcloud ToDo for the sonar code analysis  
+Sonar - Sonarcloud and Sonarcloud ToDo for the sonar code analysis  - pull and run sonarcube docker image on 9000 port -  
