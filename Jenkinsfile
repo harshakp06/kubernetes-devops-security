@@ -4,6 +4,11 @@ pipeline {
         jdk 'jdk11'
         maven 'maven'
     }
+  
+  options {
+  buildDiscarder logRotator(artifactDaysToKeepStr: '1', artifactNumToKeepStr: '1', daysToKeepStr: '1', numToKeepStr: '1')
+}
+
 
   stages {
       stage('Build Artifact') {
