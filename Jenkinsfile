@@ -44,7 +44,7 @@ pipeline {
             
             } */
 
-           stage('SonarQube Analysis') {
+         /*  stage('SonarQube Analysis') {
                steps { 
                // def mvn = tool 'Default Maven';
               withSonarQubeEnv('sonarqube') {
@@ -53,16 +53,16 @@ pipeline {
                           -Dsonar.projectName='numeric-application' \
                           -Dsonar.host.url=http://167.71.234.83:9000 "
                           
-              }
+              }  
 
-              /*timeout(time: 2, unit: 'MINUTES') {
+              timeout(time: 2, unit: 'MINUTES') {
                 script {
 
                   waitForQualityGate abortPipeline: true
                 }
-               }*/
+               }
               }
-            }
+             } */
 
           stage('Docker build and push') {
             steps {
