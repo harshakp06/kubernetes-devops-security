@@ -1,2 +1,3 @@
 var/lib/jenkins/workspace/pipeline/trivy
+# */trivy
 !**/trivy
