@@ -69,7 +69,7 @@ pipeline {
                 }
                }
               }
-             } *
+             } */
 
           stage('Docker build and push') {
             steps {
@@ -83,7 +83,7 @@ pipeline {
             }
           }
         }  
-        }  */ 
+        }  
     
     }
 }
