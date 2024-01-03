@@ -85,7 +85,7 @@ pipeline {
                   withDockerRegistry(credentialsId: 'dockerhub') {
 
                     sh "printenv"
-                    sh 'sudo su && docker build -t harshakp06/numeric-app:""$GIT_COMMIT"" .'
+                    sh 'docker build -t harshakp06/numeric-app:""$GIT_COMMIT"" .'
                     sh 'docker push harshakp06/numeric-app:""$GIT_COMMIT""'
             }
           }
