@@ -82,10 +82,9 @@ pipeline {
                     sh 'docker push harshakp06/numeric-app:""$GIT_COMMIT""'
             }
           }
-        } 
-        
-         
+        }  
         }  */ 
+    
     }
 }
 
