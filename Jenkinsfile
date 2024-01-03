@@ -14,14 +14,14 @@ pipeline {
   stages {
       stage('Build Artifact') {
             steps {
-              sh "echo passed" 
-            //   sh "mvn clean package -DskipTests=true"
-              // archiveArtifacts artifacts: 'target/*.jar' //so that they can be downloaded later
-                // sh "echo $GIT_COMMIT --short HEAD"
+            //  sh "echo passed" 
+              sh "mvn clean package -DskipTests=true"
+              archiveArtifacts artifacts: 'target/*.jar' //so that they can be downloaded later
+              sh "echo $GIT_COMMIT --short HEAD"
             }
         }  
 
-        /* stage('Unit test - Junit and Jacoco') {
+         stage('Unit test - Junit and Jacoco') {
             steps {
               sh "mvn test"
               
@@ -33,7 +33,7 @@ pipeline {
               }
             } 
             
-            } */
+            } 
 
          /* stage('Mutation Tests - PIT') {
             steps {
