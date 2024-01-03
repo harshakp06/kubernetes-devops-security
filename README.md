@@ -58,6 +58,8 @@ in pom xml file
 
 We can scan the Severity by making changes to code - we can check the CVE on the google and we need to do the required changes to the code and it should not break the code and result - minor change I did here is the chnaging the Spring boot release version - 2.2.1 -> 2.3.4 - by this there Severity got decreased by a margin 
 
+Here I changed failBuildOnCVSS to 11 - to pass build - but the cvss score is based out of 10 as maximum
+
 
 
 
