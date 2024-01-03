@@ -66,3 +66,5 @@ in pom xml file
                    </configuration>
 
 ```
+
+`` <version>2.2.1.RELEASE</version> `` 
