@@ -74,7 +74,6 @@ pipeline {
           stage('Docker build and push') {
             steps {
               script{
-
                   withDockerRegistry(credentialsId: 'dockerhub') {
 
                     sh "printenv"
