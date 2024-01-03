@@ -79,14 +79,14 @@
 						<artifactId>pitest-junit5-plugin</artifactId>
 						<version>0.12</version>
 					</dependency>
-					<configuration>
+				</dependencies>
+				<configuration>
                       <mutationThreshold>75</mutationThreshold>
                       <outputFormats>
                          <outputFormat>XML</outputFormat>
                          <outputFormat>HTML</outputFormat>
                       </outputFormats>
                    </configuration>
-				</dependencies>
 				</plugin>
 				
 				<!--                   Dependency Check Plugin                   -->
