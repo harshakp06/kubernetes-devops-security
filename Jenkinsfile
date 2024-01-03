@@ -6,8 +6,8 @@ pipeline {
     }
   
   // below code removing old builds
-  options {
-  buildDiscarder logRotator(artifactDaysToKeepStr: '1', artifactNumToKeepStr: '1', daysToKeepStr: '1', numToKeepStr: '1')
+ // options {
+  // buildDiscarder logRotator(artifactDaysToKeepStr: '1', artifactNumToKeepStr: '1', daysToKeepStr: '1', numToKeepStr: '1')
 }
 
 
