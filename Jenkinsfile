@@ -75,7 +75,6 @@ pipeline {
                   withDockerRegistry(credentialsId: 'dockerhub') {
 
                     sh "printenv"
-                    sh "chown -R jenkins:jenkins"
                     sh 'docker build -t harshakp06/numeric-app:""$GIT_COMMIT"" .'
                     sh 'docker push harshakp06/numeric-app:""$GIT_COMMIT""'
             }
