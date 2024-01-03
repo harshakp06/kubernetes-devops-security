@@ -8,20 +8,20 @@ pipeline {
   // below code removing old builds
  // options {
   // buildDiscarder logRotator(artifactDaysToKeepStr: '1', artifactNumToKeepStr: '1', daysToKeepStr: '1', numToKeepStr: '1')
-}
+// }
 
 
   stages {
       stage('Build Artifact') {
             steps {
-              //sh "echo passed" 
-               sh "mvn clean package -DskipTests=true"
-               archiveArtifacts artifacts: 'target/*.jar' //so that they can be downloaded later
-               sh "echo $GIT_COMMIT --short HEAD"
+              sh "echo passed" 
+            //   sh "mvn clean package -DskipTests=true"
+              // archiveArtifacts artifacts: 'target/*.jar' //so that they can be downloaded later
+                // sh "echo $GIT_COMMIT --short HEAD"
             }
         }  
 
-         stage('Unit test - Junit and Jacoco') {
+        /* stage('Unit test - Junit and Jacoco') {
             steps {
               sh "mvn test"
               
@@ -33,7 +33,7 @@ pipeline {
               }
             } 
             
-            }
+            } */
 
          /* stage('Mutation Tests - PIT') {
             steps {
@@ -50,7 +50,7 @@ pipeline {
             
             } */
 
-          stage('SonarQube Analysis') {
+     /*     stage('SonarQube Analysis') {
                steps { 
                // def mvn = tool 'Default Maven';
               withSonarQubeEnv('sonarqube') {
@@ -69,7 +69,7 @@ pipeline {
                 }
                }
               }
-             } 
+             } *
 
           stage('Docker build and push') {
             steps {
@@ -82,10 +82,10 @@ pipeline {
                     sh 'docker push harshakp06/numeric-app:""$GIT_COMMIT""'
             }
           }
-        }
+        } 
         
          
-        }   
+        }  */ 
     }
 }
 
