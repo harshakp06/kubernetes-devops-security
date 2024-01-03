@@ -56,4 +56,13 @@ stage('Mutation Tests - PIT') {
             
             } 
 
+in pom xml file
+ <configuration>
+                      <mutationThreshold>75</mutationThreshold>
+                      <outputFormats>
+                         <outputFormat>XML</outputFormat>
+                         <outputFormat>HTML</outputFormat>
+                      </outputFormats>
+                   </configuration>
+
 ```

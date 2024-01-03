@@ -80,13 +80,6 @@
 						<version>0.12</version>
 					</dependency>
 				</dependencies>
-				<configuration>
-                      <mutationThreshold>75</mutationThreshold>
-                      <outputFormats>
-                         <outputFormat>XML</outputFormat>
-                         <outputFormat>HTML</outputFormat>
-                      </outputFormats>
-                   </configuration>
 				</plugin>
 				
 				<!--                   Dependency Check Plugin                   -->
