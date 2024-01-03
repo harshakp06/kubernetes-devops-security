@@ -34,10 +34,11 @@ Sonar - Sonarcloud and Sonarcloud ToDo for the sonar code analysis  - pull and r
 
 Sonar docker run
 `` docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest ``
+ 
+Sonar quality gates config can be changed - change sin limits of the code smells for the new code and overall code
 
 
-
-Code for Pitmutation Tests
+Code for Pitmutation Tests - these tests were failing due to the coverage plugin is deprecated - so not added in the jekinsfile
 
 ```Jenkinsfile
 stage('Mutation Tests - PIT') {
