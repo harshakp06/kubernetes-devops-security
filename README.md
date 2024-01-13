@@ -69,13 +69,13 @@ Here I changed failBuildOnCVSS to 11 - to pass build - but the cvss score is bas
 
 ## Clone to Desktop and VM
 
-## NodeJS Microservice - Docker Image -
+##  Microservice - Docker Image -
 
 `docker run -p 8787:5000 hasrhakp06/node-service:v1`
 
 `curl localhost:8787/plusone/99`
 
-## NodeJS Microservice - Kubernetes Deployment -
+##  Microservice - Kubernetes Deployment -
 
 `kubectl create deploy node-app --image harshakp06/node-service:v1`
 
