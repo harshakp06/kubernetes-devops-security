@@ -17,7 +17,7 @@ spec:
     spec:
     
       containers:
-      - image: harshakp06/numeric-app:${GIT_COMIT}
+      - image: harshakp06/numeric-app:4fead96d421b4c7a85f4e906dffecfe36e938f89
         name: devsecops-container
 ---
 apiVersion: v1
