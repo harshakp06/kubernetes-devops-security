@@ -95,7 +95,6 @@ pipeline {
                           git add argocd/k8s_deployment_service.yaml
                           git commit -m "changes to image version"
                           git push -u origin main
-
                        '''
             }
 
