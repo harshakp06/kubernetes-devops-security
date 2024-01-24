@@ -93,10 +93,11 @@ pipeline {
 
                     sh '''
                           pwd
+                          git checkout main
                           sed -i 's#harshakp06/numeric-app:.*#harshakp06/numeric-app:${GIT_COMMIT}#g' argocd/k8s_deployment_service.yaml
                           git add argocd/k8s_deployment_service.yaml
                           git commit -m "changes to image version"
-                          git push -u origin main
+                          git push -u origin HEAD:main
                        '''
             }
 
