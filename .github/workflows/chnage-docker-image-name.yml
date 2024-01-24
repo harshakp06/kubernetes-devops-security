@@ -13,10 +13,10 @@ jobs:
         with:
            ref: argocd
       - run: sed -i 's#harshakp06/numeric-app:.*#harshakp06/numeric-app:${{ github.sha }}#g' argocd/k8s_deployment_service.yaml
-      - uses: wow-actions/update-file@v1.2.0
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          path: argocd/k8s_deployment_service.yaml
-          commit_message: 'docker image update'
-
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "generated"
+          git push
 
