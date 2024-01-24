@@ -102,6 +102,7 @@ pipeline {
                           git commit -m "changes to image version"
                           git push -u origin HEAD:main
                        '''
+                       
             }
 
           }
