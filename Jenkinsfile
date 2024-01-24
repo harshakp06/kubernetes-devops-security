@@ -84,6 +84,7 @@ pipeline {
         // git clone https://github.com/harshakp06/argocd-deploy.git
         //cd argocd-deploy
         // git pull
+        // sed -i 's#replace#harshakp06/numeric-app:${GIT_COMMIT}#g' argocd/k8s_deployment_service.yaml
                           
         stage('GIT Push') {
             steps {
@@ -92,7 +93,7 @@ pipeline {
 
                     sh '''
                           pwd
-                          sed -i 's#replace#harshakp06/numeric-app:${GIT_COMMIT}#g' argocd/k8s_deployment_service.yaml
+                          sed -i 's#harshakp06/numeric-app:.*#harshakp06/numeric-app:${GIT_COMMIT}#g' argocd/k8s_deployment_service.yaml
                           git add argocd/k8s_deployment_service.yaml
                           git commit -m "changes to image version"
                           git push -u origin main
