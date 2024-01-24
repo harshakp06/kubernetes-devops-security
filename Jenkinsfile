@@ -92,6 +92,7 @@ pipeline {
                   withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
 
                     sh '''
+                    
                           pwd
                           git checkout main
                           git pull
