@@ -91,7 +91,7 @@ pipeline {
                   withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
 
                     sh '''
-                          sed -i 's|replace|harshakp06/numeric-app:${GIT_COMMIT}|g' argocd/k8s_deployment_service.yaml
+                          sed -i 's#replace#harshakp06/numeric-app:${GIT_COMMIT}#g' argocd/k8s_deployment_service.yaml
                           git add argocd/k8s_deployment_service.yaml
                           git commit -m "changes to image version"
                           git push -u origin main
