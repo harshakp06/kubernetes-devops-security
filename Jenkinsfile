@@ -86,13 +86,13 @@ pipeline {
         // git pull
         // sed -i 's#replace#harshakp06/numeric-app:${GIT_COMMIT}#g' argocd/k8s_deployment_service.yaml
                           
-        stage('GIT Push') {
+       /* stage('GIT Push') {
             steps {
               script{
                   withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
 
                     sh '''
-                    
+
                           pwd
                           git checkout main
                           git pull
@@ -106,7 +106,7 @@ pipeline {
 
           }
         }  
-        }  
+        }  */
 
 
 
