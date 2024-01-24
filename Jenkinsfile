@@ -89,6 +89,8 @@ pipeline {
                   withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
 
                     sh '''
+                          cd argocd-deploy
+                          git pull
                           sed -i 's/replace/harshakp06/numeric-app:${GIT_COMMIT}/g' manifests/k8s_deployment_service.yaml
                           git add manifests/k8s_deployment_service.yaml
                           git commit -m "changes to image version"
