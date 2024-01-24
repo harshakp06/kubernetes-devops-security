@@ -93,8 +93,8 @@ pipeline {
 
                     sh '''
                           pwd
-                          git pull
                           git checkout main
+                          git pull
                           GIT_COMMIT=${GIT_COMMIT}
                           sed -i 's#harshakp06/numeric-app:.*#harshakp06/numeric-app:${GIT_COMMIT}#g' argocd/k8s_deployment_service.yaml
                           git add argocd/k8s_deployment_service.yaml
