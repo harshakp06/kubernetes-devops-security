@@ -67,6 +67,9 @@ Here I changed failBuildOnCVSS to 11 - to pass build - but the cvss score is bas
 
 
 ## Istio Instalation 
+
+![Alt text](/img/istio_archi.png)
+
 ```
 curl -L https://istio.io/downloadIstio | sh -
 cd istio-1.**
@@ -79,6 +82,23 @@ kubectl label namespace default istio-injection=enabled
 Addons will install Grafana, Prometheus, Jaeger, Kiali 
 
 Setting Context https://humalect.com/blog/kubectl-config-set-context
+
+## Promotheus 
+![Alt text](img/prometheus_archi.png)
+
+
+## Usage Guidance
+
+When to use metric or log data to track a particular piece of telemetry can be summarized with the following points:
+### Metrics
+   > Use metrics to track the occurrence of an event, counting of items, the time taken to perform an action or to report the current value of a resource (CPU, memory, etc.)
+
+### Logging
+   > Use logs to track detailed information about an event also monitored by a metric, particularly errors, warnings or other exceptional situations.
+
+### Traces
+   > A trace provides visibility into how a request is processed across multiple services in a microservices environment. Every trace needs to have a unique identifier associated with it.
+
 
 
 ## Fork and Clone this Repo
