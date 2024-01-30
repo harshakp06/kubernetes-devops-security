@@ -100,6 +100,7 @@ When to use metric or log data to track a particular piece of telemetry can be s
    > A trace provides visibility into how a request is processed across multiple services in a microservices environment. Every trace needs to have a unique identifier associated with it.
 
 
+DNS Spoofing on Kubernetes Clusters : https://blog.aquasec.com/dns-spoofing-kubernetes-clusters
 
 ## Fork and Clone this Repo
 
