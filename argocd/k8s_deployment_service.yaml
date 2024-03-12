@@ -17,7 +17,7 @@ spec:
     spec:
     
       containers:
-      - image: harshakp06/numeric-app:5184b66fc19d6008a70da79968cca84f826e9284
+      - image: harshakp06/numeric-app:e1ec17b54482c33b7e6f8d7d98cd3627e84d6ed7
         name: devsecops-container
 ---
 apiVersion: v1
