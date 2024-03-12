@@ -1,6 +1,28 @@
 # kubernetes-devops-security
 
 
+## Deployment on Kubernetes using ArgoCD
+ArgoCD will automatically update the Deployemnt if there is any change in the Deployement file
+Here I used Jenkins to build and push to Docker Hub with GitHub/Git commit ID tag 
+
+So, here I used Github Actions to update the Kubernetes Deployment File which is present on argocd brach in this repo with Github/Git Commit Id to the docker image tag 
+Next Argo CD will pull new Docker image from the Docker Hub and deploy to the Kubernetes 
+
+> Note : I used Jenkins to build and push and Github actions to update commit id to the k8s_deployment_service.yaml (argocd branch) on which is tracked by ArgoCD, if there is any changes to the file ArgoCD will bring our Deployemnt to the Desire state
+> I got issues while updating and pushing k8s_deployment_service.yaml to argocd branch using Jenkins, there are ways to solve it. But I want to experiment with Github Actions, I tried updating k8s_deployment_service.yaml and pusing it to argocd branch
+
+I used rollback on ArgoCD dashboard to get to previous docker image, if there is any issue with newer image
+
+## Removing resources 
+
+At first I removed the Deplyment App from Argo CD Dashboard
+Next Removing all resources from Argo CD Namespace - pods, deployments, services 
+Next Removing Argo CD Namespace 
+
+If you check `kubectl get all -n numeric` you can find no resources (here I named deploying namespace as numeric )
+
+
+
 ## Plugins
 
 Blueocean
