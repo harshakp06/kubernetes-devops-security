@@ -3,7 +3,7 @@
 
 ## Deployment on Kubernetes using ArgoCD
 ArgoCD will automatically update the Deployemnt if there is any change in the Deployement file
-Here I used Jenkins to build and push to Docker Hub with GitHub/Git commit ID tag 
+Here I used Jenkins to build and push to Docker Hub with GitHub/Git commit ID tag   
 
 So, here I used Github Actions to update the Kubernetes Deployment File which is present on argocd brach in this repo with Github/Git Commit Id to the docker image tag 
 Next Argo CD will pull new Docker image from the Docker Hub and deploy to the Kubernetes 
