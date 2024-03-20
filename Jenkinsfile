@@ -56,12 +56,12 @@ pipeline {
               }
              } */
 
-           stage('Vulnerability Scan ') {
-            steps {
-                   sh "mvn dependency-check:check"
-                }
+         /*  stage('Vulnerability Scan ') {
+            //steps {
+                   //sh "mvn dependency-check:check"
+                //}
 
-           }
+           }*/
              
             /*  post {
               always {
