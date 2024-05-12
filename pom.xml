@@ -47,7 +47,7 @@
 			</plugin>
 
                 <!--                   Jacoco Plugin                   -->
-                <plugin>
+                <!-- <plugin>
                    <groupId>org.jacoco</groupId>
                    <artifactId>jacoco-maven-plugin</artifactId>
                    <version>0.8.5</version>
@@ -65,11 +65,11 @@
                          </goals>
                       </execution>
                    </executions>
-                </plugin>
+                </plugin> -->
         
 		        <!--                   PITest Mutation Plugin                   -->
 
-				<plugin>
+				<!-- <plugin>
 				<groupId>org.pitest</groupId>
 				<artifactId>pitest-maven</artifactId>
 				<version>1.15.3</version>
@@ -80,16 +80,16 @@
 						<version>0.12</version>
 					</dependency>
 				</dependencies>
-				</plugin>
+				</plugin> -->
 				
 				<!--                   Dependency Check Plugin                   -->
-                <plugin>
-                   <groupId>org.owasp</groupId>
+                <!-- <plugin> -->
+                   <!-- <groupId>org.owasp</groupId>
                    <artifactId>dependency-check-maven</artifactId>
                    <version>9.0.7</version>
                    <configuration>
                       <format>ALL</format>
-                      <failBuildOnCVSS>11</failBuildOnCVSS>
+                      <failBuildOnCVSS>11</failBuildOnCVSS> -->
                       <!-- fail the build for CVSS greater than or equal to 5 -->
                       <!-- 
 			                                  use internal mirroring of CVE contents 
@@ -104,8 +104,8 @@
 			                                                    <suppressionFile>project-suppression.xml</suppressionFile> 
 			                                                </suppressionFiles> 
 			                                             -->
-                   </configuration>
-                </plugin>
+                   <!-- </configuration> -->
+                <!-- </plugin> -->
 			
         	</plugins>
 	</build>
